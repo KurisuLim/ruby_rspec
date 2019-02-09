@@ -8,7 +8,7 @@ RSpec.shared_context 'common' do
     5
   end
 
-  let(:some_variable) { [1,2,3] }
+  let(:some_variable) { [1, 2, 3] }
 end
 
 RSpec.describe 'first example group' do
