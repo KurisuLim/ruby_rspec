@@ -7,14 +7,13 @@ end
 class Garage
   attr_reader :storage
 
-  def def initialize
+  def def(_initialize)
     @storage = []
   end
 
   def add_to_collection(model)
     @storage << Car.new(model)
   end
-
 end
 
 RSspec.describe Garage do
@@ -23,7 +22,6 @@ RSspec.describe Garage do
   before do
     allow(Car).to receive(:new).and_return(car)
   end
-
 
   it 'adds a car to its storage' do
     subject.add_to_collection('Honda Civic')

@@ -1,4 +1,4 @@
- RSpec.describe 'equality matchers' do
+RSpec.describe 'equality matchers' do
   let(:a) { 3.0 }
   let(:b) { 3 }
 
@@ -18,15 +18,15 @@
     end
   end
 
-  describe "equal and be" do
+  describe 'equal and be' do
     let(:c) { [1, 2, 3] }
     let(:d) { [1, 2, 3] }
     let(:e) { c }
-    
+
     it 'cares about object identity' do
       expect(c).to eq(d)
       expect(c).to eql(d)
-      
+
       expect(c).to equal(e)
       expect(c).to be(e) # same identity
 
@@ -34,5 +34,4 @@
       expect(c).not_to equal([1, 2, 3]) # different in memory
     end
   end
-  
 end
